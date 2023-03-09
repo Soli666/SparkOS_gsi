@@ -58,7 +58,7 @@ You can speed up subsequent builds by adding these lines to your ~/.bashrc OR ~/
 ```
 export USE_CCACHE=1
 export CCACHE_COMPRESS=1
-export CCACHE_MAXSIZE=50G # 50 GB
+export CCACHE_MAXSIZE=100G # 100 GB
 ``` 
 
 ## Compilation 
@@ -67,8 +67,8 @@ In rom folder,
 
  ```
  . build/envsetup.sh
- ccache -M 50G -F 0
- lunch treble_arm64_bgN-userdebug 
+ ccache -M 100G -F 0
+ lunch treble_arm64_bvN-userdebug 
  make systemimage -j$(nproc --all)
  ```
 
